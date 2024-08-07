@@ -12,7 +12,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 builder.Services.AddDbContext<TimeTrackingDbContext>(options =>
-    options.UseSqlite(builder.Configuration.GetConnectionString("TrackingDbContext")));
+    options.UseSqlite("DataSource=TimeTracking.db"));
 
 var app = builder.Build();
 
